@@ -1,6 +1,2 @@
-FROM ubuntu:22.04
-RUN apt-get update && apt-get install -y nginx
-WORKDIR /usr/share/nginx/html
+FROM nginx:1.23
 COPY ./index.html /usr/share/nginx/html/index.html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
