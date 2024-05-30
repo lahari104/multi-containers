@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  spring-petclinic:
+    image: lahari23/multi-containers:spc
+    ports:
+      - "32770:8080"
+
+  chartreuse:
+    image: lahari23/multi-containers:chartreuse
+    ports:
+      - "32771:80"
+
+  tomato:
+    image: lahari23/multi-containers:tomato
+    ports:
+      - "32772:80"
+
+  orange:
+    image: lahari23/multi-containers:orange
+    ports:
+      - "32773:80"
+
+  gold:
+    image: lahari23/multi-containers:gold
+    ports:
+      - "32774:80"
+
+  pink:
+    image: lahari23/multi-containers:pink
+    ports:
+      - "32775:80"
+
+  purple:
+    image: lahari23/multi-containers:purple
+    ports:
+      - "32776:80"
+
+  green:
+    image: lahari23/multi-containers:green
+    ports:
+      - "32777:80"
+
+  red:
+    image: lahari23/multi-containers:red
+    ports:
+      - "32778:80"
+
+  aqua:
+    image: lahari23/multi-containers:aqua
+    ports:
+      - "32779:80"
