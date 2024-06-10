@@ -5,6 +5,9 @@ pipeline{
     triggers{
         pollSCM('* * * * *')
     }
+    environment{
+        DOCKER_HUB_CREDENTIALS = credentials('docker_hub_PAT')
+    }
     stages{
         stage('clone'){
             steps{
@@ -15,7 +18,7 @@ pipeline{
         stage('build and deploy'){
             steps{
                 sh 'docker compose build'
-                sh 'echo $DOCKER_TOKEN | docker login --username $DOCKER_USERNAME --password-stdin'
+                sh 'echo ${DOCKER_HUB_CREDENTIALS_PSW} | docker login -u ${DOCKER_HUB_CREDENTIALS_USR} --password-stdin'
                 sh 'docker compose push'
                 sh 'docker compose up -d'
                 sh 'docker container ls -a'
