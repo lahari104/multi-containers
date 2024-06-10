@@ -15,7 +15,7 @@ pipeline{
         stage('build and deploy'){
             steps{
                 sh 'docker compose build'
-                sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
+                sh 'echo $DOCKER_TOKEN | docker login --username $DOCKER_USERNAME --password-stdin'
                 sh 'docker compose push'
                 sh 'docker compose up -d'
                 sh 'docker container ls -a'
