@@ -2,51 +2,81 @@ version: '3.8'
 
 services:
   spring-petclinic:
-    image: lahari23/multi-containers:spc
+    build:
+      context: .
+      dockerfile: Image-1/Dockerfile
+    image: lahari23/multi-containers:spc-1
     ports:
       - "32770:8080"
 
   chartreuse:
-    image: lahari23/multi-containers:chartreuse
+    build:
+      context: .
+      dockerfile: Image-2/Dockerfile
+    image: lahari23/multi-containers:chartreuse-1
     ports:
       - "32771:80"
 
   tomato:
-    image: lahari23/multi-containers:tomato
+    build:
+      context: .
+      dockerfile: Image-3/Dockerfile
+    image: lahari23/multi-containers:tomato-1
     ports:
       - "32772:80"
 
   orange:
-    image: lahari23/multi-containers:orange
+    build:
+      context: .
+      dockerfile: Image-4/Dockerfile
+    image: lahari23/multi-containers:orange-1
     ports:
       - "32773:80"
 
   gold:
-    image: lahari23/multi-containers:gold
+    build:
+      context: .
+      dockerfile: Image-5/Dockerfile
+    image: lahari23/multi-containers:gold-1
     ports:
       - "32774:80"
 
   pink:
-    image: lahari23/multi-containers:pink
+    build:
+      context: .
+      dockerfile: Image-6/Dockerfile
+    image: lahari23/multi-containers:pink-1
     ports:
       - "32775:80"
 
   purple:
-    image: lahari23/multi-containers:purple
+    build:
+      context: .
+      dockerfile: Image-7/Dockerfile
+    image: lahari23/multi-containers:purple-1
     ports:
       - "32776:80"
 
   green:
-    image: lahari23/multi-containers:green
+    build:
+      context: .
+      dockerfile: Image-8/Dockerfile
+    image: lahari23/multi-containers:green-1
     ports:
       - "32777:80"
 
   red:
-    image: lahari23/multi-containers:red
+    build:
+      context: .
+      dockerfile: Image-9/Dockerfile
+    image: lahari23/multi-containers:red-1
     ports:
       - "32778:80"
 
   aqua:
-    image: lahari23/multi-containers:aqua
+    build:
+      context: .
+      dockerfile: Image-10/Dockerfile
+    image: lahari23/multi-containers:aqua-1
     ports:
       - "32779:80"
