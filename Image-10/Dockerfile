@@ -1,2 +1,2 @@
 FROM nginx:1.23
-COPY ./index.html /usr/share/nginx/html/index.html
+COPY Image-10/index.html /usr/share/nginx/html/index.html
