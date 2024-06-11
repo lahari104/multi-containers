@@ -7,6 +7,7 @@ pipeline{
     }
     environment{
         DOCKER_HUB_CREDENTIALS = credentials('docker_hub_PAT')
+        TAG                    = "${env.BUILD_NUMBER}"
     }
     stages{
         stage('clone'){
